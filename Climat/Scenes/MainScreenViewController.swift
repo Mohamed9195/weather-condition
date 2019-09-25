@@ -19,7 +19,6 @@ class MainScreenViewController: UIViewController, LocationStatus {
     @IBOutlet fileprivate weak var tempLabel: UILabel!
     @IBOutlet fileprivate weak var imageTemp: UIImageView!
     @IBOutlet fileprivate weak var cityName: UILabel!
-    @IBOutlet fileprivate weak var allData: UITextView!
     
     let dispose: DisposeBag = DisposeBag()
     var MainModel: Climat?
@@ -87,7 +86,7 @@ class MainScreenViewController: UIViewController, LocationStatus {
             self.cityName.text = wither.city
             self.tempLabel.text = String(wither.temperature ?? 0)  + "°c"
             self.imageTemp.image = UIImage(named: (wither.weatherIconName)!)
-            self.allData.text = "wind Degree: \(wither.deg!)  \n wind Speed;: \(wither.speed!)  \n  sunrise: \(wither.sunrise!) \n sunset \(wither.sunset!)"
+//            self.allData.text = "wind Degree: \(wither.deg!)  \n wind Speed;: \(wither.speed!)  \n  sunrise: \(wither.sunrise!) \n sunset \(wither.sunset!)"
         }
     }
     
